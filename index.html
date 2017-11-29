@@ -132,6 +132,7 @@
       </div>
       <div class="form-rang">
         <form class="clearfix">
+          <label for="">Speed:</label>
           <input id="speed" type="range">
         </form>
       </div>
@@ -142,22 +143,27 @@
 
   <script>
     $(document).ready(function() {
-      var slider = $('.slider-cells').slick({
-        infinite: false,
-        slidesToShow: 25,
-        slidesToScroll: 1,
-        autoplaySpeed: 0,
-        speed: 1000,
-        touchMove: false,
-        nextArrow: $('.slick-next'),
-        prevArrow: $('.slick-prev'),
-      });
+      function settings() {
+        return {
+          infinite: false,
+          slidesToShow: 25,
+          slidesToScroll: 1,
+          autoplaySpeed: 0,
+          speed: 1000,
+          touchMove: false,
+          nextArrow: $('.slick-next'),
+          prevArrow: $('.slick-prev')
+        }
+      }
+
+      var slider = $('.slider-cells').slick(settings());
 
       // ação pra dar scroll automático
       $('.slick-play').click(function() {
-        slider.slick('slickPlay');
         // pega a velocidade do range e seta pro slider
         slider.slick("setOption", "speed", speed);
+        // da o play automatico
+        slider.slick('slickPlay');
       });
 
       $('.slick-next').click(function() {
@@ -172,10 +178,11 @@
 
       // ação 'stop' pra dar um reset no slider
       $('.slick-stop').click(function() {
-        // seta o a velocidade pra 0 
-        slider.slick("setOption", "speed" , 0);
-        // joga o slider pro index 0 (primeiro item)
-        $('.slider-cells').slick('slickGoTo' , 0);
+        // desmonta o slider
+        $(slider).slick('unslick');
+        // monta o slider 
+        $('.slider-cells').slick(settings());
+
         
       });
 

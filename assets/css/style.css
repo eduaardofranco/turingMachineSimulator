@@ -130,23 +130,27 @@ body {
 }
 .form button {
   border: 0;
-  background: ccc;
+  background: #ccc;
+  border-radius: 0 3px 3px 0;
   color: #333;
+  cursor: pointer;
   float: left;
   font-weight: bold;
+  outline: none;
   padding: 0 10px;
   height: 30px;
 }
-.form button {
-  cursor: pointer;
-  outline: none;
-}
 .form-rang {
   float: right;
+  margin-top: 10px;
   width: 260px;
 }
 .form-rang input {
   transform: rotate(180deg);
   float: right;
+}
+.form-rang label {
+  color: #333;
+  font-weight: bold;
 }
 /* botão velocidade */
