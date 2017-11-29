@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--reset-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <!--css-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!--css ícones-->
+  <link rel="stylesheet" type="text/css" href="assets/icons/style.css">
+  <!--css slider-->
+  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+  <!--jquery-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="guia-inf">
+      <div class="item-inf">Steps: 5</div>
+      <div class="item-inf">State: q0</div>
+    </div>
+    <ul class="slider-cells">
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+    </ul>
+    <div class="anchor"></div>
+    <div class="slider-controls clearfix">
+      <div class="form">
+        <form class="clearfix">
+          <input type="text">
+          <button type="submit">Load</button>
+        </form>
+      </div>
+      <div class="central">
+        <div class="slick-play control-button">
+          <i class="icon-play"></i>
+        </div>
+        <div class="slick-pause control-button">
+          <i class="icon-pause"></i>        
+        </div>
+        <div class="slick-stop control-button">
+          <i class="icon-stop"></i>        
+        </div>
+        <div class="slick-next control-button">
+          <i class="icon-next"></i>
+        </div>
+      </div>
+      <div class="form-rang">
+        <form class="clearfix">
+          <input id="speed" type="range">
+        </form>
+      </div>
+      </div><!--.central-->
+  </div><!--.container -->
+  <!--slider-->
+  <script src="assets/js/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      var slider = $('.slider-cells').slick({
+        infinite: false,
+        slidesToShow: 25,
+        slidesToScroll: 1,
+        autoplaySpeed: 0,
+        speed: 1000,
+        touchMove: false,
+        nextArrow: $('.slick-next'),
+        prevArrow: $('.slick-prev'),
+      });
+
+      // ação pra dar scroll automático
+      $('.slick-play').click(function() {
+        slider.slick('slickPlay');
+        // pega a velocidade do range e seta pro slider
+        slider.slick("setOption", "speed", speed);
+      });
+
+      $('.slick-next').click(function() {
+        slider.slick('slickPlay');
+        // pega a velocidade do range e seta pro slider
+        slider.slick("setOption", "speed", speed);
+      });
+
+      // ação pra pausar o scroll automático
+      $('.slick-pause').click(function() {
+        slider.slick('slickPause');
+      });
+
+      //comportamento speed
+      let range = $('#speed');
+      var speed;
+      // pega o valor do range, multiplica por 20 e atribui a variavel speed
+      $(range).on('input', function() {
+        speed = $(this).val();
+        speed = speed * 20;
+        console.log(speed);    
+      });
+
+    });
+  </script>
+</body>
+</html>

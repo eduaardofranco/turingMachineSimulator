@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix::before, .clearfix::after {
+  content: '';
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.container {
+  margin: 1em auto;
+  width: calc(80% - 2px);
+}
+/* item cell*/
+.item-cell {
+  background: #6A5ACD;
+  color: white;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 1px;
+  text-align: center;
+  height: 40px!important;
+}
+/* infos parte superior*/
+.guia-inf {
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-top: 15px;
+
+}
+.guia-inf  .item-inf {
+  border-bottom: 3px solid #6A5ACD;
+  display: inline-block;
+  color: #333;
+  font-weight: bold;
+  padding: 2px 0;
+  text-align: center;
+}
+.guia-inf  .item-inf:last-child {
+  float: right;
+}
+/* indicador meio*/
+.anchor {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid black;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*botões de navegação centrais*/
+.slider-controls {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 55px;
+  padding: 10px 0;
+  text-align: center;
+}
+.central {
+  display: inline-block;
+}
+.control-button {
+  background: #DCDCDC;
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+  float: left;
+  line-height: 35px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  height: 35px;
+  width: 40px;
+  font-size: 19px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.control-button:after {
+    content: "";
+    background: #ccc;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.control-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.control-button + .control-button {
+  margin-left: 5px;
+}
+.slick-stop,
+.slick-pause {
+  font-size: 14px;
+}
+/* input load */
+.form {
+  float: left;
+  margin-top: 4px;
+  width: 260px;
+}
+.form input {
+  border: 1px solid #ccc;
+  float: left;
+  padding: 0 10px;
+  height: 30px;
+  width: 200px;
+}
+.form input:focus {
+  outline: 0;
+  transition: all .3s ease-in-out;
+  border: 1px solid #333;
+}
+.form button {
+  border: 0;
+  background: ccc;
+  color: #333;
+  float: left;
+  font-weight: bold;
+  padding: 0 10px;
+  height: 30px;
+}
+.form button {
+  cursor: pointer;
+  outline: none;
+}
+.form-rang {
+  float: right;
+  width: 260px;
+}
+.form-rang input {
+  transform: rotate(180deg);
+  float: right;
+}
+/* botão velocidade */
