@@ -23,49 +23,21 @@
       <div class="item-inf">State: q0</div>
     </div>
     <ul class="slider-cells">
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell"></li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
+      <li class="item-cell">1</li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
+      <li class="item-cell">2</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
+      <li class="item-cell">3</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
@@ -73,33 +45,61 @@
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
+      <li class="item-cell">4</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
+      <li class="item-cell">5</li>
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
-      <li class="item-cell"></li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
-      <li class="item-cell">s</li>
+      <li class="item-cell">6</li>
       <li class="item-cell"></li>
+      <li class="item-cell">s</li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
+      <li class="item-cell"><7/li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
       <li class="item-cell"></li>
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">8</li>
+      <li class="item-cell"></li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">9</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">1</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">s</li>
+      <li class="item-cell"></li>
+      <li class="item-cell">s</li>
+      <li class="item-cell">2</li>
       <li class="item-cell">s</li>
       <li class="item-cell">s</li>
       <li class="item-cell"></li>
@@ -170,6 +170,15 @@
         slider.slick('slickPause');
       });
 
+      // ação 'stop' pra dar um reset no slider
+      $('.slick-stop').click(function() {
+        // seta o a velocidade pra 0 
+        slider.slick("setOption", "speed" , 0);
+        // joga o slider pro index 0 (primeiro item)
+        $('.slider-cells').slick('slickGoTo' , 0);
+        
+      });
+
       //comportamento speed
       let range = $('#speed');
       var speed;
@@ -177,7 +186,6 @@
       $(range).on('input', function() {
         speed = $(this).val();
         speed = speed * 20;
-        console.log(speed);    
       });
 
     });
